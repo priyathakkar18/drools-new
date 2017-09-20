@@ -1,0 +1,15 @@
+package rules
+ 
+import com.javainuse.model.QuesionObject
+rule "for question 1"
+	when 
+		quesionObject: QuesionObject(questionId=="1", answerId=="1")
+	then
+		quesionObject.setQuestionId(3);
+	end
+rule "for question 2"
+	when 
+		quesionObject: QuesionObject(questionId=="1", answerId=="2")
+	then
+		quesionObject.setQuestionId(4);
+	end
